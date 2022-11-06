@@ -25,5 +25,6 @@ public class FeesStructure {
 	private LocalDate updatedDate;
 	private String narration;
 	private Double fees;
+	private String status;
 }
 

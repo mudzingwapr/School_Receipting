@@ -10,6 +10,6 @@ public interface FeesStructureService {
     FeesStructureResponsesDto save(FeesStructureDto feesStructureDto);
     void delete(Integer id);
     FeesStructureResponsesDto update( Integer id,FeesStructureDto feesStructureDto);
-    void FeesStructureDelete(Integer id);
-    List<FeesStructure> listist();
+    void feesStructureDelete(Integer id);
+    List<FeesStructure> findAll();
 }

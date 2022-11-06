@@ -8,6 +8,7 @@ import com.logarithm.services.FeesStructureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -75,13 +76,17 @@ if(feesStructure.isPresent()) {
     }
 
     @Override
-    public void FeesStructureDelete(Integer id) {
-        feesStructureRepository.deleteById(id);
+    public void feesStructureDelete(Integer id) {
+
+        var feesStructure=feesStructureRepository.findById(id)
+                .orElseThrow(()-> new EntityNotFoundException("Fees structure not found"));
+
+        feesStructure.setStatus("Deleted");
 
     }
 
     @Override
-    public List<FeesStructure> listist() {
+    public List<FeesStructure> findAll() {
         List<FeesStructure> feesStructures=feesStructureRepository.findAll();
         return feesStructures;
     }

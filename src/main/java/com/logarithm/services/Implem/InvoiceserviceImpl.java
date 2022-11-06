@@ -14,6 +14,9 @@ import com.logarithm.models.Invoice;
 import com.logarithm.repository.InvoiceRepository;
 //import com.logarithm.repository.ReceiptRepository;
 import com.logarithm.services.InvoiceService;
+
+import javax.persistence.EntityNotFoundException;
+
 @Service
 public class InvoiceserviceImpl implements InvoiceService {
 	@Autowired
@@ -51,8 +54,9 @@ public class InvoiceserviceImpl implements InvoiceService {
 
 	@Override
 	public Invoice findOne(Integer id) {
-		
-		return invoicerepos.findById(id).get();
+		var invoice=invoicerepos.findById(id).orElseThrow(()->new EntityNotFoundException("Invoice not found"));
+
+		return invoice;
 	}
 
 	@Override

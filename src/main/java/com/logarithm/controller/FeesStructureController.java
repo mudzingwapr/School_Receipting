@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/feesStructure")
+@RequestMapping("/fees-structures")
 public class FeesStructureController {
     @Autowired
     private FeesStructureService feesStructureService;
@@ -29,11 +29,11 @@ public class FeesStructureController {
     }
     @DeleteMapping("/delete/{id}")
     public void deleteFeesStructure(Integer id){
-        feesStructureService.FeesStructureDelete(id);
+        feesStructureService.feesStructureDelete(id);
     }
 
-    @GetMapping("/findAll")
+    @GetMapping("/find-all")
     public ResponseEntity<List<FeesStructure>> listResponseEntity(){
-    return ResponseEntity.ok(feesStructureService.listist());
+    return ResponseEntity.ok(feesStructureService.findAll());
     }
 }
