@@ -21,6 +21,7 @@ public class Receipt {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Integer Id;
 	private Integer invoiceId;
+	private String classid;
 	private Double amountCharged;
 	private Double amountPaid;
 	private String schoolId;

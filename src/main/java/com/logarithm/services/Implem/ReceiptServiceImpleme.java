@@ -33,6 +33,7 @@ public class ReceiptServiceImpleme implements IReceiptService {
         receipt.setSchool(receiptDto.getSchool());
         receipt.setInvoiceId(receiptDto.getInvoiceno());
         receipt.setAmountCharged(receiptDto.getAmountCharged());
+        receipt.setClassid(receiptDto.getClassid());
         receipt.setSchool(receiptDto.getSchool());
         receipt.setSchoolId(receiptDto.getSchoolId());
         receipt.setStudentDetails(receiptDto.getStudentDetails());
@@ -68,6 +69,7 @@ public class ReceiptServiceImpleme implements IReceiptService {
             Receipt receipt=receipt1.get();
             receipt.setAmountCharged(receiptDto.getAmountCharged());
             receipt.setAmountPaid(receiptDto.getAmountCharged());
+            receipt.setClassid(receiptDto.getClassid());
             receipt.setSchool(receiptDto.getSchool());
             receipt.setAmountCharged(receiptDto.getAmountCharged());
             receipt.setSchool(receiptDto.getSchool());

@@ -28,6 +28,7 @@ public class Invoice {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer Id;
 	private Double amountCharged;
+	private String classid;
 	private Double amountDue;
 	private String schoolId;
 	private String school;

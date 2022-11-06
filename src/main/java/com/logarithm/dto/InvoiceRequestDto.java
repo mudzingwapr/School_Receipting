@@ -16,6 +16,7 @@ public class InvoiceRequestDto {
 	private Double amountCharged;
 	private Double amountDue;
 	private String schoolId;
+	private String classid;
 	private String school;
 	private String studentId;
 	private String studentDetails;

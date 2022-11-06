@@ -10,6 +10,7 @@ import lombok.Data;
 public class ReceiptDto {
 	private Integer invoiceno;
 	private Double amountCharged;
+	private String classid;
 	private Double amountDue;
 	private String schoolId;
 	private String school;

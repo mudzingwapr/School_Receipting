@@ -5,17 +5,18 @@ import com.logarithm.dto.response.FeesStructureResponsesDto;
 import com.logarithm.models.FeesStructure;
 import com.logarithm.services.FeesStructureService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/fees-structures")
 public class FeesStructureController {
-    @Autowired
-    private FeesStructureService feesStructureService;
+
+    private final FeesStructureService feesStructureService;
 
 @PostMapping("/save")
     public ResponseEntity<FeesStructureResponsesDto> createFeesStructure(@RequestBody FeesStructureDto feesStructureDto){

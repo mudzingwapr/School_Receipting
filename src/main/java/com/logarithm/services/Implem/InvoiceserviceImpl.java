@@ -35,6 +35,7 @@ public class InvoiceserviceImpl implements InvoiceService {
 		//invoice.setAmountDue(invoiceRequestDto.getAmountDue());
 		Config.getAmountDue(null,invoice);
 		invoice.setSchool(invoice.getSchool());
+		invoice.setClassid(invoiceRequestDto.getClassid());
 		invoice.setAmountCharged(invoiceRequestDto.getAmountCharged());
 		invoice.setSchool(invoiceRequestDto.getSchool());
 		invoice.setSchoolId(invoiceRequestDto.getSchoolId());
